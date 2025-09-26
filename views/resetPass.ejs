@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password reset</title>
+    <style>
+        h1{
+            color: brown;
+        }
+        h1 i{
+            font-style: italic;
+            text-decoration: underline;
+        }
+        h2{
+            color: brown;
+        }
+        p{
+            font-size: large;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>welcome <i>@<%= userName %></i></h1>
+    <h2> please reset the password</h2>
+    <label for="otpValue">Enter the otp</label>
+    <input type="text" id="otpValue" name="otp" pattern="\d{4}" maxlength="4" placeholder="enter otp"/>
+    <button id="otp">SUBMIT</button>
+    <p></p>
+    <form action="/simonGame"></form>
+    <script src="/script.js">
+    </script>
+</body>
+</html>
