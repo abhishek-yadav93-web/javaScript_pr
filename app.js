@@ -6,6 +6,8 @@ app.use(express.urlencoded({extended:true}))// that is used for when data come e
 app.set("view engine","ejs")// that is used for ejs package 
 app.use(express.static(path.join(__dirname,"public")))// that is used for store styling html
 app.listen(port)
+let methodOverride=require("method-override")
+app.use(methodOverride("_method"));
 let data=[{
     userName:"abhishek",
     userEmail:"ay930529@gmail.com",
@@ -54,3 +56,10 @@ app.post("/simonGame/resetPassword",(req,res)=>{
     }
 })
 //console.log(data)
+app.patch("/simonGame",(req,res)=>{
+    let{password}=req.body
+    for(el of data){
+        el.password=password
+    }
+    res.redirect("/simonGame")
+})

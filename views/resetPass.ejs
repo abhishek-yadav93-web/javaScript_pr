@@ -29,7 +29,15 @@
     <input type="text" id="otpValue" name="otp" pattern="\d{4}" maxlength="4" placeholder="enter otp"/>
     <button id="otp">SUBMIT</button>
     <p></p>
-    <form action="/simonGame"></form>
+    <hr>
+    <form action="/simonGame?_method=PATCH" method="POST">
+        <label for="firstPassword">Enter new Password</label>
+        <input type="password" name="password" id="FirstPassword" placeholder="new password"><br>
+        <label for="secPassword">Reenter new Password</label>
+        <input type="password"  id="secPassword" placeholder="reneter password"><br>
+        <button id="passwordChange">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;<button>Reset</button>
+    </form><br>
+    <p id="pass"></p>
     <script src="/script.js">
     </script>
 </body>
