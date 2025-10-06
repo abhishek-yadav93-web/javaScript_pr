@@ -20,12 +20,14 @@ app.get("/simonGame",(req,res)=>{
 app.post("/simonGame",(req,res)=>{
     let {userName,password}=req.body
     //console.log(req.body)
+    let query=`select userName,password from data where userName='${userName}' AND password='${password}'`
+    function dataFatched(){}// hare we write execute method 
     let con=data.find((el)=>(el.userName==userName || el.userEmail==userName || el.number==userName) && el.password==password)
     if(con){
         res.render("simonGamepage.ejs")
     }else{
         let txt="you entered wrong password "
-        res.redirect("/simonGame")
+        res.render("errorPage.ejs")
     }
 })
 // that is create new user id
