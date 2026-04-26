@@ -55,3 +55,19 @@ It includes:
 ---
 
 ## 📂 Project Structure
+## node modules <__All information related to the packages >
+## public
+    |
+    |-----script.js
+    |-----script1.js
+    |-----style1.css
+    |------style2.css
+    |-------style3.css
+## views<inside that all templates file >
+      |
+      |------errorPage.ejs
+      |------login.ejs
+      |-------newDetails.ejs
+      |-------otp.ejs
+      |--------resetPass.ejs
+      |------simonGamepage.ejs
